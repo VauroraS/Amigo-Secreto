@@ -1,0 +1,228 @@
+:root {
+    --color-primary: #4B69FD;
+    --color-secondary: #FFF9EB;
+    --color-tertiary: #C4C4C4;
+    --color-button: #fe652b;
+    --color-button-hover: #e55720;
+    --color-text: #444444;
+    --color-white: #FFFFFF;
+}
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    max-width: 1200px; /* Limitar el ancho máximo */
+    margin: 0 auto;
+}
+
+/* Banner */
+.header-banner {
+    flex: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.header-banner img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Sección de entrada */
+.input-section {
+    flex: 60%;
+    background-color: var(--color-secondary);
+    border: 1px solid #000;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+/* Títulos */
+.main-title {
+    font-size: 36px; /* Tamaño reducido para móviles */
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    font-style: italic;
+    color: var(--color-white);
+    text-align: center;
+}
+
+.section-title {
+    font-family: "Inter", serif;
+    font-size: 24px; /* Tamaño reducido para móviles */
+    font-weight: 700;
+    color: var(--color-primary);
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* Contenedores de entrada y botón */
+.input-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.input-name {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 25px 0 0 25px;
+    font-size: 16px;
+}
+
+.button-container {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Estilos de botón */
+button {
+    padding: 10px 20px; /* Padding reducido para móviles */
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    border: 2px solid #000;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.button-add {
+    background-color: var(--color-tertiary);
+    color: var(--color-text);
+    border-radius: 0 25px 25px 0;
+}
+
+.button-add:hover {
+    background-color: #a1a1a1;
+}
+
+/* Listas */
+ul {
+    list-style-type: none;
+    color: var(--color-text);
+    font-family: "Inter", sans-serif;
+    font-size: 16px; /* Tamaño reducido para móviles */
+    margin: 20px 0;
+    padding: 0;
+    width: 100%;
+    max-width: 600px;
+}
+
+.result-list {
+    margin-top: 15px;
+    color: #05DF05;
+    font-size: 18px; /* Tamaño reducido para móviles */
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Botón de sortear título */
+.button-draw {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 300px;
+    padding: 10px 20px; /* Padding reducido para móviles */
+    color: var(--color-white);
+    background-color: var(--color-button);
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.button-draw img {
+    margin-right: 10px; /* Margen reducido para móviles */
+    width: 24px; /* Tamaño reducido para móviles */
+    height: 24px;
+}
+
+.button-draw:hover {
+    background-color: var(--color-button-hover);
+}
+
+/* Media Queries para Responsive Design */
+
+/* Tablets */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 32px;
+    }
+
+    .section-title {
+        font-size: 20px;
+    }
+
+    .input-name {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .button-draw {
+        padding: 8px 16px;
+    }
+}
+
+/* Móviles */
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 28px;
+    }
+
+    .section-title {
+        font-size: 18px;
+    }
+
+    .input-name {
+        font-size: 12px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .button-draw {
+        padding: 6px 12px;
+    }
+
+    .header-banner {
+        padding: 10px 0;
+    }
+
+    .input-section {
+        padding: 10px;
+    }
+}
